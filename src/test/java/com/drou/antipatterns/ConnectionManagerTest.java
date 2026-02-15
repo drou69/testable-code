@@ -10,12 +10,26 @@ public class ConnectionManagerTest {
     @Test
     void should_be_able_to_execute() {
         //Arrange
-        ConnectionManager manager = new ConnectionManager();
+        ConnectionManagerFake manager = new ConnectionManagerFake();
 
         //Act
-        boolean status = manager.isConnected();
+        manager.connect();
 
         //Assert
-        assertThat(status, is(true));
+        assertThat(manager.isConnected(), is(true));
+    }
+
+    private static class ConnectionManagerFake extends ConnectionManager{
+        @Override
+        public SlowService getService() {
+            return new SlowServiceStub();
+        }
+    }
+
+    private static class SlowServiceStub extends SlowService{
+        @Override
+        public String call(String input) {
+            return "Processed: " + input;
+        }
     }
 }
