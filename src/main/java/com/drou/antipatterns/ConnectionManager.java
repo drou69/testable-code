@@ -1,12 +1,16 @@
 package com.drou.antipatterns;
 
 public class ConnectionManager {
-    private final String status;
+    private final SlowService service;
+    private String status;
 
-    public ConnectionManager() {
+    public ConnectionManager(SlowService service) {
         // Constructor does slow work
-        SlowService service = new SlowService();
-        this.status = service.call("connect");
+        this.service = service;
+    }
+
+    public void connect() {
+        status = this.service.call("connect");
     }
 
     public boolean isConnected() {
