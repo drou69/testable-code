@@ -9,7 +9,7 @@ public class ConnectionManager {
         this.status = service.call("connect");
     }
 
-    public String getStatus() {
-        return status;
+    public boolean isConnected() {
+        return status.equalsIgnoreCase("Processed: connect");
     }
 }
