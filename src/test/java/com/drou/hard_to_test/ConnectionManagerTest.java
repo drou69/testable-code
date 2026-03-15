@@ -1,4 +1,4 @@
-package com.drou.antipatterns;
+package com.drou.hard_to_test;
 
 import org.junit.jupiter.api.Test;
 
