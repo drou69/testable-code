@@ -1,16 +1,16 @@
 # This repo is dedicated to testability
 
-## The package "hard_to_test" contains a few Anti Patterns that reduce Code Testability:
+## The package "hardtotest" contains a few Anti Patterns that reduce Code Testability:
 | Anti Pattern                         | Class |
 |--------------------------------------| --- |
-| Work in constructor                  | hard_to_test.ConnectionManagerTest |
-| Deep Coupling (Demeter Law)          | hard_to_test.CustomerOrderTest |
-| Mixing new with logic                | hard_to_test.OrderProcessorTest |
-| Static                               | hard_to_test.PriceManagerTest |
-| Static Initialization                | hard_to_test.MeatManagerTest |
-| Final in Method and Class            | hard_to_test.OrderServiceTest |
-| Deep Inheritence                     | hard_to_test.RussianDollsTest |
-| Non Deterministic                    | hard_to_test.UserCreatorTest |
+| Work in constructor                  | hardtotest.ConnectionManagerTest |
+| Deep Coupling (Demeter Law)          | hardtotest.CustomerOrderTest |
+| Mixing new with logic                | hardtotest.OrderProcessorTest |
+| Static                               | hardtotest.PriceManagerTest |
+| Static Initialization                | hardtotest.MeatManagerTest |
+| Final in Method and Class            | hardtotest.OrderServiceTest |
+| Deep Inheritence                     | hardtotest.RussianDollsTest |
+| Non Deterministic                    | hardtotest.UserCreatorTest |
 
 ## The package "fragility.maintenance" contains a few Anti Patterns that increase Test Fragility to change:
 | Anti Pattern                         | Class |
