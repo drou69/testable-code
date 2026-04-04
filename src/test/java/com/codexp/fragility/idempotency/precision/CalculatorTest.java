@@ -9,7 +9,7 @@ public class CalculatorTest {
     //Can behave differently depending on compiler optimisation
     @Test
     @Disabled("To have the tests running for the other exercises")
-    void testAddition() {
+    void should_be_able_to_add_two_numbers_with_decimals() {
         Calculator calc = new Calculator();
         double result = calc.add(0.1, 0.2);
         // Might be 0.30000000000000004, causing an exact match failure

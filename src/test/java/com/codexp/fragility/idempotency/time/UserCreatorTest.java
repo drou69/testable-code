@@ -10,7 +10,7 @@ public class UserCreatorTest {
 
     @Test
     @Disabled("To have the tests running for the other exercises")
-    void should_be_able_to_execute() {
+    void should_be_able_to_timestamp_user_creation() {
         UserCreator creator = new UserCreator();
         assertThat(creator.createUser(), equalTo("Processed: User-2025-09-21T15:40:53.149587300"));
     }

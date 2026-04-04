@@ -11,7 +11,7 @@ public class UrgencyManagerTest {
 
     //JVM Dependant: might pass (or not) when executed in another environment
     @Test
-    void testGetTagsOrder() {
+    void should_be_able_to_retrieve_error_levels() {
         UrgencyManager manager = new UrgencyManager();
         assertEquals(List.of("alpha", "urgent", "high-priority"),
                 new ArrayList<>(manager.getLevels()));
