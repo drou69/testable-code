@@ -11,10 +11,9 @@ public class LoyaltyServiceTest {
 
     //How do we fix that?
 
-    //The more complex the logic is to produce the value, the more tempted people are to do this
-    //What about reusing constants from your production code in your tests?
-    //if you duplicate behavior, you duplicate bugs too when there are some present in your code
-    //figure out the scenarios (main and alternates) and calculate yourself the possible outcomes to use these values as golden standards
+    // The more complex the logic is to produce the value, the more tempted people are to do this
+    // What about reusing constants from your production code in your tests?
+    // If you duplicate behavior, you duplicate bugs too when there are some present in your code
     @Test
     void testGetGoldStatus_Mirrored() {
         List<Customer> input = Arrays.asList(
@@ -35,8 +34,10 @@ public class LoyaltyServiceTest {
         assertEquals(expected, actual);
     }
 
+    // Figure out the scenarios (main and alternates) and calculate yourself the possible outcomes to use
+    // these values as golden standards
     @Test
-    void testGetGoldStatus_ByScenarios() {
+    void should_be_able_to_qualify_GoldStatus_in_a_robust_way() {
         Customer goldUser = new Customer(true, 1000, "USA"); // Exactly at boundary
         Customer lowSpend = new Customer(true, 999, "USA");  // Just below boundary
         Customer inactive = new Customer(false, 5000, "USA"); // High spend but inactive
@@ -50,6 +51,5 @@ public class LoyaltyServiceTest {
         // Assert on hard-coded, known expectations
         assertEquals(1, actual.size(), "Only one customer should qualify");
         assertTrue(actual.contains(goldUser), "User with exactly 1000 spend in USA should be Gold");
-        assertFalse(actual.contains(lowSpend), "User with 999 spend should not qualify");
     }
 }

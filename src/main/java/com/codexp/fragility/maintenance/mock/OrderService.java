@@ -11,10 +11,15 @@ public class OrderService {
     }
 
     public double checkout(Order order) {
-        double total = order.getItems().stream()
-                .mapToDouble(item -> item.getPrice() - promoService.findPromotion(item))
+        double savings = order.getItems().stream()
+                .mapToDouble(item -> {
+                    double promotion = promoService.findPromotion(item);
+                    double netPrice = item.getPrice() - promotion;
+                    return netPrice < 0 ? item.getPrice() : promotion;
+                })
                 .sum();
 
-        return calculator.calculate(order);
+        double total = calculator.calculate(order);
+        return  total - savings;
     }
 }

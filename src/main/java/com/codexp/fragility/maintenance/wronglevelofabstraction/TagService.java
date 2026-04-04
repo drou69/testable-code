@@ -3,7 +3,7 @@ package com.codexp.fragility.maintenance.wronglevelofabstraction;
 import java.util.*;
 
 public class TagService {
-    public Collection<String> getTags(String content) {
+    public Collection<String> getTags() {
         // Implementation detail: Using TreeSet to keep things alphabetical
         Set<String> tags = new TreeSet<>();
 
