@@ -11,17 +11,19 @@ public class OrderItemBuilder {
     public static OrderItemBuilder createOrderItem(){
         return new OrderItemBuilder();
     }
-    public OrderItemBuilder laptop() {
-        productId = "PROD-1";
-        this.name = "Laptop";
-        this.price = 1000.0;
+
+    public OrderItemBuilder id(String id) {
+        productId = id;
         return this;
     }
 
-    public OrderItemBuilder mouse() {
-        this.productId = "PROD-2";
-        this.name = "Mouse";
-        this.price = 25.0;
+    public OrderItemBuilder name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public OrderItemBuilder name(double price) {
+        this.price = price;
         return this;
     }
 

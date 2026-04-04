@@ -12,14 +12,6 @@ public class CustomerBuilder {
         return new CustomerBuilder();
     }
 
-    public CustomerBuilder vipCustomer(){
-        return this.withId("1").withName("Marcel").asVIP();
-    }
-
-    public CustomerBuilder normalCustomer(){
-        return this.withId("1").withName("Marcel").asNormalGuest();
-    }
-
     public CustomerBuilder withId(String id){
         this.id = id;
         return this;

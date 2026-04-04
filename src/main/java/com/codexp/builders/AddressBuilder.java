@@ -14,10 +14,6 @@ public class AddressBuilder {
         return new AddressBuilder();
     }
 
-    public AddressBuilder fromQuebec(){
-        return this.street("St-Laurent").city("Montreal").province("Quebec").country("Canada").postalCode("H3C3P4");
-    }
-
     public AddressBuilder street(String street){
         this.street = street;
         return this;
