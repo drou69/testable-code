@@ -7,18 +7,18 @@ import static org.mockito.Mockito.*;
 public class FraudCheckerTest {
 
     @Test
-    void shouldLogHighValueOrders() {
+    void should_log_suspicious_activity() {
         AuditService audit = mock(AuditService.class);
         FraudChecker checker = new FraudChecker(audit);
 
-        Order highValueOrder = new Order(1500);
-        checker.check(highValueOrder);
+        Order suspiciousOrder = new Order(1500);
+        checker.check(suspiciousOrder);
 
-        verify(audit).log("High value order");
+        verify(audit).log("Suspicious activity");
     }
 
     @Test
-    void shouldNotLogNormalOrders() {
+    void should_not_log_normal_orders() {
         AuditService audit = mock(AuditService.class);
         FraudChecker checker = new FraudChecker(audit);
 

@@ -6,9 +6,9 @@ import java.util.List;
 
 public class OrderServiceTest {
 
-    //Dummies for values are most of the tine a code smell (i.e. bad design)
-    //Dummies are mostly used purposefully for crosscutting concerns that are beyond
-    // what we are testing and we don't care about what they do or return at the moment.
+    // When Dummies are used for values, most of the time, it indicates a code smell (i.e. bad design)
+    // Dummies are mostly used purposefully for crosscutting concerns that are beyond the scope of what
+    // we are testing (i.e. logging)
     @Test
     public void should_be_able_to_calculate_total_for_many_items(){
         AuditService dummyAudit = new DummyAuditService();

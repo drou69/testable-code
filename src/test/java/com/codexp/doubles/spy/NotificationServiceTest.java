@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NotificationServiceTest {
     @Test
-    void shouldSendEmailOnOrderPlaced() {
+    void should_send_email_on_order_placed() {
         SpyEmailSender spySender = new SpyEmailSender();
         NotificationService service = new NotificationService(spySender);
 

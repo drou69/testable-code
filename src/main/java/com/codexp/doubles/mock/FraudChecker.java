@@ -9,7 +9,7 @@ public class FraudChecker {
 
     public void check(Order order) {
         if (order.getTotal() > 1000) {
-            audit.log("High value order");
+            audit.log("Suspicious activity");
         }
     }
 }

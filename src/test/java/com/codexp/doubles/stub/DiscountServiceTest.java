@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiscountServiceTest {
     @Test
-    void premiumCustomerGetsDiscount() {
+    void premium_customer_gets_discount() {
         // Stub provides controlled output
         CustomerRepository stubRepo = new StubCustomerRepository(true);
         DiscountService service = new DiscountService(stubRepo);
@@ -17,7 +17,7 @@ public class DiscountServiceTest {
     }
 
     @Test
-    void regularCustomerGetsNoDiscount() {
+    void regular_customer_gets_no_discount() {
         CustomerRepository stubRepo = new StubCustomerRepository(false);
         DiscountService service = new DiscountService(stubRepo);
 
