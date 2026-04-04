@@ -10,7 +10,6 @@
 | Static Initialization                | hardtotest.MeatManagerTest |
 | Final in Method and Class            | hardtotest.OrderServiceTest |
 | Deep Inheritence                     | hardtotest.RussianDollsTest |
-| Non Deterministic                    | hardtotest.UserCreatorTest |
 
 ## The package "fragility.maintenance" contains a few Anti Patterns that increase Test Fragility to change:
 | Anti Pattern                         | Class |
