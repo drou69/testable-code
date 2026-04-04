@@ -1,4 +1,4 @@
-package com.codexp.hardtotest;
+package com.codexp.hardtotest.exercice4;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,13 +9,11 @@ public class PriceManagerTest {
 
     @Test
     void should_be_able_to_find_availability() {
-        PriceManager priceManager = new PriceManager();
-        assertThat(priceManager.validateAvailability(), equalTo(true));
+        assertThat(PriceManager.validateAvailability(), equalTo(true));
     }
 
     @Test
     void should_prove_that_static_arent_always_bad_citizens() {
-        PriceManager priceManager = new PriceManager();
-        assertThat(priceManager.validateTrue(), equalTo(true));
+        assertThat(PriceManager.isAvailable(), equalTo(true));
     }
 }

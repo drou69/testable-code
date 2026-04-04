@@ -1,4 +1,6 @@
-package com.codexp.hardtotest;
+package com.codexp.hardtotest.exercice4;
+
+import com.codexp.hardtotest.SlowService;
 
 public class PriceManager {
 
@@ -7,7 +9,7 @@ public class PriceManager {
         return new SlowService().call("In Stock?") != null;
     }
 
-    static public boolean validateTrue(){
+    static public boolean isAvailable(){
         //do something harmless
         return true;
     }

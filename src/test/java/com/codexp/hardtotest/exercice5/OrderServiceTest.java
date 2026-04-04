@@ -1,4 +1,4 @@
-package com.codexp.hardtotest;
+package com.codexp.hardtotest.exercice5;
 
 import org.junit.jupiter.api.Test;
 
