@@ -15,7 +15,7 @@
 | Mauvaise Pratique                             | Classe                                                       |
 |-----------------------------------------------|--------------------------------------------------------------|
 | Reflection                                    | reflection.InvoiceServiceTest |
-| Mock                                          | mock.OrderServiceTest |
+| Mock                                          | mock.CheckoutServiceTest |
 | CircularReasoning                             | circularreasoning.LoyaltyServiceTest |
 | Le code de test déborde dans le code de prod  | testleaksintoprodcode.WineManagerTest |
 | Utilisation de types concrets                 | usingconcretetypes.ReportGeneratorTest |

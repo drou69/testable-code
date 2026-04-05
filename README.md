@@ -12,12 +12,12 @@
 | Deep Inheritence                     | exercice7.RussianDollsTest |
 
 ## The package "fragility.maintenance" contains a few Anti Patterns that increase Test Fragility to change:
-| Anti Pattern                         | Class |
-|--------------------------------------| --- |
-| Reflection                           | reflection.InvoiceServiceTest |
-| Mock                                 | mock.OrderServiceTest |
-| CircularReasoning                    | circularreasoning.LoyaltyServiceTest |
-| Tests Leaks Into Prod Code           | testleaksintoprodcode.WineManagerTest |
+| Anti Pattern                         | Class                                  |
+|--------------------------------------|----------------------------------------|
+| Reflection                           | reflection.InvoiceServiceTest          |
+| Mock                                 | mock.CheckoutServiceTest               |
+| CircularReasoning                    | circularreasoning.LoyaltyServiceTest   |
+| Tests Leaks Into Prod Code           | testleaksintoprodcode.WineManagerTest  |
 | Using Concrete Types                 | usingconcretetypes.ReportGeneratorTest |
 | Wrong Level of Abstraction           | wronglevelofabstraction.TagServiceTest |
 
