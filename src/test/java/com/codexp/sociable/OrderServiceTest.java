@@ -62,6 +62,10 @@ public class OrderServiceTest {
         assertFalse(order.isPaid());
     }
 
+    // What are we really testing when we are 100% isolated like that?
+    // If we stop mocking what we own, what do we get?
+    // How does mocking affects test fragility?
+    // Would this problem with promotions be a thing with another Test Double strategy?
     @Test
     void BAD_test_that_becomes_meaningless_if_we_mock_DiscountService() {
         OrderRepository repository = new OrderRepository();
