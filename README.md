@@ -6,8 +6,8 @@
 | Mixing new with logic                | exercice1.OrderProcessorTest |
 | Work in constructor                  | exercice2.ConnectionManagerTest |
 | Static Initialization                | exercice3.MeatManagerTest |
-| Static                               | exercice4.PriceManagerTest |
-| Final in Method and Class            | exercice5.OrderServiceTest |
+| Static calls                         | exercice4.PriceManagerTest |
+| Final on Methods and Classes         | exercice5.OrderServiceTest |
 | Deep Coupling (Demeter Law)          | exercice6.CartManagerTest |
 | Deep Inheritence                     | exercice7.RussianDollsTest |
 
@@ -34,18 +34,18 @@
 ## The package "builders" contains a test with a long and heavy Arrange phase:
 | Anti Pattern                         | Class |
 |--------------------------------------| --- |
-| Long and heavy Arrange phase         | builders.CheckoutServiceTest |
+| Long and heavy Arrange phase         | CheckoutServiceTest |
 
 ## The package "doubles" shows how to use Test Doubles:
 | Test Double                          | Class |
 |--------------------------------------| --- |
-| Dummy                                | doubles.dummy.OrderServiceTest |
-| Fake                                 | doubles.fake.InventoryServiceTest |
-| Stub                                 | doubles.stub.DiscountServiceTest |
-| Spy                                  | doubles.spy.NotificationServiceTest |
-| Mock                                 | doubles.mock.FraudCheckerTest |
+| Dummy                                | dummy.OrderServiceTest |
+| Fake                                 | fake.InventoryServiceTest |
+| Stub                                 | stub.DiscountServiceTest |
+| Spy                                  | spy.NotificationServiceTest |
+| Mock                                 | mock.FraudCheckerTest |
 
 ## The package "sociable" shows the power of sociable testing:
 | Anti Pattern                                 | Class |
 |----------------------------------------------| --- |
-| Bad things can happen when we mock a friend  | doubles.dummy.OrderServiceTest |
+| Bad things can happen when we mock a friend  | OrderServiceTest |
