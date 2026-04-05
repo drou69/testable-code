@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
+    private PromoCode promoCode;
     private final List<OrderItem> items = new ArrayList<>();
     private boolean paid = false;
 
@@ -23,6 +24,18 @@ public class Order {
 
     public boolean isPaid() {
         return paid;
+    }
+
+    public void addPromoCode(String type) {
+        this.promoCode = new PromoCode();
+    }
+
+    public boolean hasPromoCode(){
+        return promoCode != null;
+    }
+
+    public PromoCode getPromoCode(){
+        return promoCode;
     }
 
     public record OrderItem(String name, double price) {}

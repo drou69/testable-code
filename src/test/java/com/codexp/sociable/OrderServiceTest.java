@@ -67,7 +67,7 @@ public class OrderServiceTest {
     // How does mocking affects test fragility?
     // Would this problem with promotions be a thing with another Test Double strategy?
     @Test
-    void BAD_test_that_becomes_meaningless_if_we_mock_DiscountService() {
+    void should_behave_weirdly_when_we_mock_the_wrong_things() {
         OrderRepository repository = new OrderRepository();
         DiscountService discountService = mock(DiscountService.class);
         PaymentGateway paymentGateway = mock(PaymentGateway.class);
@@ -76,6 +76,7 @@ public class OrderServiceTest {
                 new OrderService(repository, paymentGateway, discountService);
 
         Order order = new Order();
+        order.addPromoCode("FLASH_SALE");
         order.addItem("Laptop", 120.0);
 
         when(discountService.applyAvailableDiscount(order)).thenReturn(50.0);
