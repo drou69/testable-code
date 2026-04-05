@@ -1,41 +1,40 @@
 # Ce dépôt de code est dédié à la testabilité du code
 
 ## Le package "hardtotest" contient quelques mauvaises pratiques qui réduisent la testabilité:
-| Mauvaise Pratique                                         | Classe                           |
-|-----------------------------------------------------------|----------------------------------|
-| Work in constructor                                       | hardtotest.ConnectionManagerTest |
-| Deep Coupling (Demeter Law)                               | hardtotest.CustomerOrderTest     |
-| Mixing new with logic                                     | hardtotest.OrderProcessorTest    |
-| Static                                                    | hardtotest.PriceManagerTest      |
-| Static Initialization                                     | hardtotest.MeatManagerTest       |
-| Final in Method and Class                                 | hardtotest.OrderServiceTest      |
-| Deep Inheritence                                          | hardtotest.RussianDollsTest      |
-| Non Deterministic                                         | hardtotest.UserCreatorTest       |
+| Mauvaise Pratique                            | Classe                           |
+|----------------------------------------------|----------------------------------|
+| Mélanger logique d'affaire et instantiation  | exercice1.OrderProcessorTest |
+| Logique dans le constructeur                 | exercice2.ConnectionManagerTest |
+| Initialisation statique                      | exercice3.MeatManagerTest |
+| Appel static                                 | exercice4.PriceManagerTest |
+| Classe et méthode finales                    | exercice5.OrderServiceTest |
+| Couplage profond (Loie de Demeter)           | exercice6.CartManagerTest |
+| Héritage profond                             | exercice7.RussianDollsTest |
 
 ## Le package "fragility.maintenance" contient quelques mauvaises pratiques qui augmente la fragilité des tests aux changements:
-| Mauvaise Pratique             | Classe                                                       |
-|-------------------------------|--------------------------------------------------------------|
-| Reflection                    | fragility.maintenance.reflection.InvoiceServiceTest          |
-| Mock                          | fragility.maintenance.mock.OrderServiceTest                  |
-| CircularReasoning             | fragility.maintenance.circularreasoning.LoyaltyServiceTest   |
-| Tests Leaks Into Prod Code    | fragility.maintenance.testleaksintoprodcode.OrderServiceTest |
-| Using Concrete Types          | fragility.maintenance.usingconcretetypes.ReportGeneratorTest |
-| Wrong Level of Abstraction    | fragility.maintenance.wronglevelofabstraction.TagServiceTest |
+| Mauvaise Pratique                             | Classe                                                       |
+|-----------------------------------------------|--------------------------------------------------------------|
+| Reflection                                    | reflection.InvoiceServiceTest |
+| Mock                                          | mock.OrderServiceTest |
+| CircularReasoning                             | circularreasoning.LoyaltyServiceTest |
+| Le code de test déborde dans le code de prod  | testleaksintoprodcode.WineManagerTest |
+| Utilisation de types concrets                 | usingconcretetypes.ReportGeneratorTest |
+| Mauvais niveau d'abstraction                  | wronglevelofabstraction.TagServiceTest |
 
 ## Le package "fragility.idempotency" contient quelques mauvaises pratiques qui rendent les tests fragiles à l'échec pour de mauvaises raisons:
-| Fragilité                                  | Classe                                          |
-|--------------------------------------------|-------------------------------------------------|
-| Global State                               | fragility.idempotency.PayementManagerTest       |
-| Random                                     | fragility.idempotency.OrderServiceTest          |
-| Time                                       | fragility.idempotency.LoyaltyServiceTest        |
-| Precision                                  | fragility.idempotency.precision.CalculatorTest  |
-| Order                                      | fragility.idempotency.order.UrgencyManagerTest  |
-| Locale                                     | fragility.idempotency.locale.PriceFormatterTest |
+| Fragilité                            | Classe                                          |
+|--------------------------------------|-------------------------------------------------|
+| État global                          | globalstate.PayementManagerTest |
+| Aléatoire                            | random.BingoMachineTest |
+| Temps                                | time.UserCreatorTest |
+| Précision                            | precision.CalculatorTest |
+| Ordre                                | order.UrgencyManagerTest |
+| Localisation                         | locale.PriceFormatterTest |
 
 ## Le package "builders" contient un test avec une mise en place longue et fastidieuse:
 | Mauvaise Pratique                                             | Classe                       |
 |---------------------------------------------------------------|------------------------------|
-| Long and heavy Arrange phase                                  | builders.CheckoutServiceTest |
+| Mise en place longue et fastidieuse                           | builders.CheckoutServiceTest |
 
 ## Le package "doubles" montre comment utilisé à bon escient les doublûres de tests:
 | Doublûre de tests | Classe                              |
@@ -45,3 +44,8 @@
 | Stub              | doubles.stub.DiscountServiceTest    |
 | Spy               | doubles.spy.NotificationServiceTest |
 | Mock              | doubles.mock.FraudCheckerTest       |
+
+## The package "sociable" shows the power of sociable testing:
+| Mauvaise Pratique                                        | Class |
+|----------------------------------------------------------| --- |
+| De mauvaise choses peuvent arriver quand on mock un ami  | OrderServiceTest |
