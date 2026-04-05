@@ -3,33 +3,33 @@
 ## The package "hardtotest" contains a few Anti Patterns that reduce Code Testability:
 | Anti Pattern                         | Class |
 |--------------------------------------| --- |
-| Work in constructor                  | hardtotest.ConnectionManagerTest |
-| Deep Coupling (Demeter Law)          | hardtotest.CustomerOrderTest |
-| Mixing new with logic                | hardtotest.OrderProcessorTest |
-| Static                               | hardtotest.PriceManagerTest |
-| Static Initialization                | hardtotest.MeatManagerTest |
-| Final in Method and Class            | hardtotest.OrderServiceTest |
-| Deep Inheritence                     | hardtotest.RussianDollsTest |
+| Mixing new with logic                | exercice1.OrderProcessorTest |
+| Work in constructor                  | exercice2.ConnectionManagerTest |
+| Static Initialization                | exercice3.MeatManagerTest |
+| Static                               | exercice4.PriceManagerTest |
+| Final in Method and Class            | exercice5.OrderServiceTest |
+| Deep Coupling (Demeter Law)          | exercice6.CartManagerTest |
+| Deep Inheritence                     | exercice7.RussianDollsTest |
 
 ## The package "fragility.maintenance" contains a few Anti Patterns that increase Test Fragility to change:
 | Anti Pattern                         | Class |
 |--------------------------------------| --- |
-| Reflection                           | fragility.maintenance.reflection.InvoiceServiceTest |
-| Mock                                 | fragility.maintenance.mock.OrderServiceTest |
-| CircularReasoning                    | fragility.maintenance.circularreasoning.LoyaltyServiceTest |
-| Tests Leaks Into Prod Code           | fragility.maintenance.testleaksintoprodcode.OrderServiceTest |
-| Using Concrete Types                 | fragility.maintenance.usingconcretetypes.ReportGeneratorTest |
-| Wrong Level of Abstraction           | fragility.maintenance.wronglevelofabstraction.TagServiceTest |
+| Reflection                           | reflection.InvoiceServiceTest |
+| Mock                                 | mock.OrderServiceTest |
+| CircularReasoning                    | circularreasoning.LoyaltyServiceTest |
+| Tests Leaks Into Prod Code           | testleaksintoprodcode.WineManagerTest |
+| Using Concrete Types                 | usingconcretetypes.ReportGeneratorTest |
+| Wrong Level of Abstraction           | wronglevelofabstraction.TagServiceTest |
 
 ## The package "fragility.idempotency" contains a few Anti Patterns that increase Test Fragility in failling for the wrong reasons:
 | Fragility                            | Class |
 |--------------------------------------| --- |
-| Global State                         | fragility.idempotency.PayementManagerTest |
-| Random                               | fragility.idempotency.OrderServiceTest |
-| Time                                 | fragility.idempotency.LoyaltyServiceTest |
-| Precision                            | fragility.idempotency.precision.CalculatorTest |
-| Order                                | fragility.idempotency.order.UrgencyManagerTest |
-| Locale                               | fragility.idempotency.locale.PriceFormatterTest |
+| Global State                         | globalstate.PayementManagerTest |
+| Random                               | random.BingoMachineTest |
+| Time                                 | time.UserCreatorTest |
+| Precision                            | precision.CalculatorTest |
+| Order                                | order.UrgencyManagerTest |
+| Locale                               | locale.PriceFormatterTest |
 
 ## The package "builders" contains a test with a long and heavy Arrange phase:
 | Anti Pattern                         | Class |
@@ -44,3 +44,8 @@
 | Stub                                 | doubles.stub.DiscountServiceTest |
 | Spy                                  | doubles.spy.NotificationServiceTest |
 | Mock                                 | doubles.mock.FraudCheckerTest |
+
+## The package "sociable" shows the power of sociable testing:
+| Anti Pattern                                 | Class |
+|----------------------------------------------| --- |
+| Bad things can happen when we mock a friend  | doubles.dummy.OrderServiceTest |
