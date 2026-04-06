@@ -12,7 +12,7 @@ class CheckoutServiceTest {
     private TaxService taxService;
 
     @Test
-    void should_calculate_total_and_charge_customer_appropriately_when_oredring_from_quebec() {
+    void should_calculate_total_and_charge_customer_appropriately_when_ordering_from_quebec() {
         // ARRANGE
         OrderItem mouse = OrderItemScenario.createMouse(2, 25);
         OrderItem laptops = OrderItemScenario.createLaptop(1, 1000);
@@ -43,7 +43,7 @@ class CheckoutServiceTest {
     }
 
     @Test
-    void should_calculate_total_and_charge_customer_appropriately_when_oredring_from_ontario() {
+    void should_calculate_total_and_charge_customer_appropriately_when_ordering_from_ontario() {
         // ARRANGE
         OrderItem mouse = OrderItemScenario.createMouse(2, 25);
         OrderItem laptops = OrderItemScenario.createLaptop(1, 1000);
