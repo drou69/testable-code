@@ -11,7 +11,6 @@ public class Customer {
         this.country = country;
     }
 
-    // Getters used by the LoyaltyService logic
     public boolean isActive() {
         return active;
     }
@@ -24,8 +23,6 @@ public class Customer {
         return country;
     }
 
-    // Overriding equals and hashCode is critical if you want to use
-    // assertEquals(expectedList, actualList) in your unit tests.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

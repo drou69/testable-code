@@ -8,7 +8,6 @@ import static org.hamcrest.Matchers.is;
 
 public class ConnectionManagerTest {
 
-    //Find at least two different ways to solve this problem
     @Test
     void should_be_connected() {
         //Arrange
